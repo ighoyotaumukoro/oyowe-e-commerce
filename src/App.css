@@ -1,0 +1,88 @@
+
+
+.navbar{
+  padding-top : 10px;
+  padding-bottom : 10px;
+  border-bottom: 1px solid grey;
+  max-width: 100%;
+  
+}
+
+.navbar-brand{
+  text-decoration: none;
+  font-family: Arial;
+  font-weight: 700;
+  color: black;
+  margin-left: 20px;
+}
+
+.navbar-container{
+  display: flex;
+ justify-content: space-between;
+  
+}
+
+.home, .cart{
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  font-family: Arial;
+  font-size: 14px;
+  
+}
+
+
+.login, .signup{
+  padding: 5px;
+  
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+ 
+  font-family: Arial;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+
+
+.welcome, .sub{
+  font-family: Arial;
+  text-align: center;
+
+}
+
+.page-title{
+  font-family: Arial;
+  margin-top: 50px;
+}
+
+.page{
+  background-color: rgb(240, 240, 240);
+}
+
+.welcome{
+  font-size: 25px;
+}
+
+.sub{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media (max-width:768px){
+ .product-list{
+flex-wrap: nowrap;
+overflow: auto;
+} 
+}
+@media (min-width: 768px){
+.product-list{
+flex-wrap: wrap ;
+overflow: visible;
+}
+
+.product-list .card{
+  flex:0 0 calc(33.333% - 1rem) !important;
+}
+}
