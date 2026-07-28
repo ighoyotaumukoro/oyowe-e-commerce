@@ -107,11 +107,21 @@ overflow: auto;
   margin-right: 50px !important;
   
 }
+
+.nav-logo{
+  width: 40px ;
+  
+}
 .navbar-links{
   margin-left: 20px !important;
 }
 }
 @media (min-width: 768px){
+
+  .nav-logo{
+  width: 40px ;
+  
+}
 .product-list{
 flex-wrap: wrap ;
 overflow: visible;

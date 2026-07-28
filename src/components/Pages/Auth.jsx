@@ -7,7 +7,7 @@ export default function Auth() {
   const [mode, setMode] = useState("signup");
   const [error, setError] = useState(null);
    const navigate = useNavigate();
-  const { signUp, user, logout, login } = useContext(AuthContext);
+  const { signUp, user, login } = useContext(AuthContext);
  
   const {
     register,
@@ -34,7 +34,7 @@ export default function Auth() {
     <div className="pt-5 page">
       <div className="container">
         
-        <button onClick={() => logout()}>Log Out</button>
+
         <div className="card auth-card  border-0 shadow m-auto  ">
           <div className="card-body align-content-center justify-content-center">
             <h1 className="page-title mt-0 mx-auto mb-4">
