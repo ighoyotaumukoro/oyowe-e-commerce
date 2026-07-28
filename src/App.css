@@ -70,16 +70,61 @@
   font-weight: 400;
 }
 
+.form-label{
+  display: block;
+  font-weight: 700;
+
+}
+
+.auth-card{
+  padding-top: 30px !important;
+  padding-bottom:  10px !important;
+}
+
+
+.page-title{
+  font-weight: bolder !important;
+}
+.form-input{
+
+  width: 100%;
+  padding-top: 10px ;
+  padding-bottom: 10px;
+  padding-left: 7px;
+  border-radius: 5px ;
+  
+}
+
 @media (max-width:768px){
  .product-list{
 flex-wrap: nowrap;
 overflow: auto;
 } 
+
+.navbar-brand{
+  position: unset;
+  margin-left: auto;
+  margin-right: 50px !important;
+  
+}
+.navbar-links{
+  margin-left: 20px !important;
+}
 }
 @media (min-width: 768px){
 .product-list{
 flex-wrap: wrap ;
 overflow: visible;
+
+}
+
+.auth-card{
+  width: 30% !important;
+}
+
+
+.navbar-links{
+  margin-left: 500px !important;
 }
 
 .product-list .card{

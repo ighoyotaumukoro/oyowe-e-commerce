@@ -11,8 +11,8 @@ export default function  Navbar(){
   return(
     <Nav className="container-fluid navbar">
       <div className="navbar-container d-flex">
-       <Link to="/" className="navbar-brand">OyoweEnt</Link>
-       <div className="navbar-links align-content-center  ">
+       <Link to="/" className="navbar-brand"><img src="/HJYG4683.PNG" className="img-fluid position-absolute top-0 " style={{width:"7vh"}}/></Link>
+       <div className="navbar-links align-content-center  justify-content-center">
         <Link to="/" className="home ">Home</Link>
         <Link to="/checkout" className="cart">Cart</Link>
        </div>
