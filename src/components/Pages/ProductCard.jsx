@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { product } from "../../data/products";
-export default function ProductCard({product}) {
+export default function ProductCard({ product }) {
   return (
     <div
-      className="card m-2 border-0 shadow-sm"
+      className="card m-2 border-0 shadow-sm "
       style={{ flex: "0 0 85%", scrollSnapAlign: "start" }}
-     
     >
-      <div className="card-body">
+      
         <img
           src={product.image}
           className="img-fluid card-img-top"
@@ -16,6 +15,7 @@ export default function ProductCard({product}) {
             height: "200px",
           }}
         />
+        <div className="product-details p-3">
         <p className="fw-bolder mt-3 mb-1">{product.name}</p>
         <h5 className="fw-bold" style={{ color: "rgb(7, 83, 247)" }}>
           ₦{product.price}
@@ -33,8 +33,8 @@ export default function ProductCard({product}) {
           >
             Add to cart
           </button>
+          </div>
         </div>
       </div>
-    </div>
   );
 }

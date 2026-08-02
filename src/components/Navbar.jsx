@@ -33,7 +33,7 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="navbar-user align-content-center position-absolute end-0 me-4">
-            <span className="me-2">Hello, {user.email}</span>
+            <span className="me-2">Hello, {user.name}</span>
             <Link to="/auth" className="text-dark">
             <button
               onClick={logout}

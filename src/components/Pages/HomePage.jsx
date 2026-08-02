@@ -5,7 +5,9 @@ export default function HomePage() {
   return (
     <div className="page py-4">
       <div className="home-hero">
-        <h1 className="welcome fw-bolder pt-4">Welcome to Easylife Gadgethub!</h1>
+        <h1 className="welcome fw-bolder pt-4">
+          Welcome to Easylife Gadgethub!
+        </h1>
         <p className="sub">Discover amazing products at great prices</p>
       </div>
       <div className="container-fluid ">
@@ -15,7 +17,7 @@ export default function HomePage() {
           style={{ scrollbarWidth: "none", scrollSnapType: "x mandatory" }}
         >
           {product.map((product) => (
-            <ProductCard product={product}  key={product.id}/>
+            <ProductCard product={product} key={product.id} />
           ))}
         </div>
       </div>

@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 export default function Auth() {
   const [mode, setMode] = useState("signup");
   const [error, setError] = useState(null);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const { signUp, user, login } = useContext(AuthContext);
- 
+
   const {
     register,
     handleSubmit,
@@ -19,22 +19,23 @@ export default function Auth() {
     setError(null);
     let result;
     if (mode === "signup") {
-      result = signUp(data.email, data.password);
+      result = signUp(data.name, data.password);
     } else {
-      result = login(data.email, data.password);
+      result = login(data.name, data.password);
     }
-  }
+   if (result.success === false){
+    setError(result.error);
+   }
+  };
 
-  useEffect(()=> {
-      if (user){
-        navigate("/");
-      }
-    }, [user, navigate]);
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    } 
+  }, [user, navigate]);
   return (
     <div className="pt-5 page">
       <div className="container">
-        
-
         <div className="card auth-card  border-0 shadow m-auto  ">
           <div className="card-body align-content-center justify-content-center">
             <h1 className="page-title mt-0 mx-auto mb-4">
@@ -47,17 +48,17 @@ export default function Auth() {
                 </div>
               )}
               <div className="form-group">
-                <label className="form-label" htmlFor="email">
-                  Email
+                <label className="form-label" htmlFor="name">
+                  Name
                 </label>
                 <input
                   type="text"
-                  id="email"
-                  {...register("email", { required: "Email is required" })}
+                  id="name"
+                  {...register("name", { required: "Full-name is required" })}
                   className="form-input"
                 />
-                {errors.email && (
-                  <span className="text-danger">{errors.email.message}</span>
+                {errors.name && (
+                  <span className="text-danger">{errors.name.message}</span>
                 )}
               </div>
               <div className="form-group">

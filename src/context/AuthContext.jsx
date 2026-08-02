@@ -4,40 +4,40 @@ export const AuthContext = createContext(null);
 
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(
-    localStorage.getItem("currentUserEmail")
-      ? { email: localStorage.getItem("currentUserEmail") }
+    localStorage.getItem("currentUserName")
+      ? { name: localStorage.getItem("currentUserName") }
       : null,
   );
 
-  function signUp(email, password) {
+  function signUp(name, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    if (users.find((u) => u.email === email)) {
-      return { success: false, error: "Email already exists" };
+    if (users.find((u) => u.name === name)) {
+      return { success: false, error: "User already exists" };
     }
-    const newUser = { email, password };
+    const newUser = { name, password };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("currentUserEmail", email);
-    setUser({ email });
+    localStorage.setItem("currentUserName", name);
+    setUser({ name });
     return { succcess: true };
   }
 
-  function login(email, password) {
+  function login(name, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     const user = users.find(
-      (u) => u.email === email && u.password === password,
+      (u) => u.name === name && u.password === password,
     );
     
     if (!user) {
-      return { success: false, error: "Invalid email or password" };
+      return { success: false, error: "Invalid name or password" };
     }
-    localStorage.setItem("currentUserEmail", email);
-    setUser({ email });
+    localStorage.setItem("currentUserName", name);
+    setUser({ name });
     return { succes: true };
   }
 
   function logout() {
-    localStorage.removeItem("currentUserEmail");
+    localStorage.removeItem("currentUserName");
     setUser(null);
   }
   return (
