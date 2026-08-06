@@ -12,7 +12,7 @@ export const product=[
     name:"Iphone 17",
     price: "2,500,000",
     image:"/IMG_6512.JPG",
-    description:"Premium wireless headphone with noise cancellation",
+    description:"RAM 8GB, storage 256GB, iOS 26 wit Apple intelligence built-in",
   },
 
    {
@@ -20,7 +20,7 @@ export const product=[
     name:"Airpods",
     price: "20,500",
     image:"/IMG_E6514.JPG",
-    description:"Premium wireless headphone with noise cancellation",
+    description:"Apple airpods with USB-C charging case. Seamless pairing with iphone/ipad/Mac",
   },
 
    {
@@ -28,7 +28,7 @@ export const product=[
     name:"Techno",
     price: "150,000",
     image:"/IMG_6517.PNG",
-    description:"Premium wireless headphone with noise cancellation",
+    description:"Dimensity 8200 ultra, 12GB RAM, 512GB storage. Techno current camera king and best seller in Nigeria",
   },
 
    {
@@ -36,7 +36,7 @@ export const product=[
     name:"Ipad pro",
     price: "900,800",
     image:"/IMG_E6518.JPG",
-    description:"Premium wireless headphone with noise cancellation",
+    description:"10.9 inch Liquid Retina display, A14 Bionic chip, USB-C, 56GB storage",
   },
 
    {
@@ -44,7 +44,7 @@ export const product=[
     name:"Iphone 11",
     price: "234,000",
     image:"/IMG_6513.PNG",
-    description:"Premium wireless headphone with noise cancellation",
+    description:"RAM 4GB, storage 128GB , Glass back.",
   },
 ]
 

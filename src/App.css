@@ -100,10 +100,23 @@ overflow: auto;
 .product-des{
   font-size: 12px;
 }
+.checkout-item-name{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.checkout-item-price{
+  font-size: 14px;
+}
 
 .product-image{
-  width: 120px !important;
-  height: 120px !important;
+  width:130px !important;
+  height: 180px !important;
+}
+
+.cart-image{
+  width:80px !important;
+  height: 80px !important;
 }
 .navbar-brand{
   position: unset;
