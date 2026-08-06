@@ -8,6 +8,7 @@ export default function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
+  
   const { addToCart, cartItems } = useCart();
   const productInCart = cartItems.find((item) => item.id === product.id);
   const productQuantityLabel = productInCart
@@ -22,12 +23,15 @@ export default function ProductDetails() {
       return;
     }
 
+    
+
     setProduct(foundProduct);
     console.log("product found:", foundProduct);
   }, [id, navigate]);
   if (!product) {
     return <h1>Loading...</h1>;
   }
+  
 
   
   return (

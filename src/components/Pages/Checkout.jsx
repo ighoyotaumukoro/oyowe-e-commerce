@@ -9,7 +9,7 @@ export default function Checkout() {
         <h1 className="mt-4">
           CheckOut
           <div className="checkout-container">
-            <div className="checkout-items bg-white rounded-2 mt-5">
+            <div className="checkout-items p-3 bg-white rounded-2 mt-5">
               <h2 className="mb-4"> Order Summary</h2>
               {cartItems.map((item) => (
                 <div className="checkout-items d-flex">
