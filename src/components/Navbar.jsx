@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
   return (
-    <Nav className="container-fluid navbar">
+    <Nav className="container-fluid navbar bg-white">
       <div className="navbar-container d-flex">
         <Link to="/" className="navbar-brand">
           <img

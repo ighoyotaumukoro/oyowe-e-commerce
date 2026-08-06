@@ -1,5 +1,3 @@
-
-
 .navbar{
   padding-top : 10px;
   padding-bottom : 10px;
@@ -17,7 +15,7 @@
 }
 
 .navbar-container{
-  display: flex;
+ display: flex;
  justify-content: space-between;
   
 }
@@ -34,16 +32,13 @@
 
 .login, .signup{
   padding: 5px;
-  
   text-decoration: none;
   color: rgb(12, 12, 12);
- 
   font-family: Arial;
   color: #fff;
   border-radius: 3px;
   font-size: 12px;
 }
-
 
 
 .welcome, .sub{
@@ -57,12 +52,9 @@
   margin-top: 50px;
 }
 
-.page{
-  background-color: rgb(240, 240, 240);
-}
 
 .welcome{
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .sub{
@@ -101,6 +93,18 @@ flex-wrap: nowrap;
 overflow: auto;
 } 
 
+.product-name{
+  font-size: 16px;
+}
+
+.product-des{
+  font-size: 12px;
+}
+
+.product-image{
+  width: 120px !important;
+  height: 120px !important;
+}
 .navbar-brand{
   position: unset;
   margin-left: auto;

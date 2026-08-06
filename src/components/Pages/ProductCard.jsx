@@ -20,9 +20,9 @@ export default function ProductCard({ product }) {
         <h5 className="fw-bold" style={{ color: "rgb(7, 83, 247)" }}>
           ₦{product.price}
         </h5>
-        <p className="text-muted fw-semibold">{product.description}</p>
+        <p className="text-muted fw-semibold"></p>
         <div className="justify-content-between d-flex">
-          <Link>
+          <Link to={`/products/${product.id}`}>
             <button className="btn border-0 btn-secondary btn-sm">
               View details
             </button>

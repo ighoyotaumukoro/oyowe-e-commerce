@@ -46,6 +46,12 @@ export const product=[
     image:"/IMG_6513.PNG",
     description:"Premium wireless headphone with noise cancellation",
   },
-
-   
 ]
+
+export function getProducts(){
+  return product;
+}
+
+export function getProductById(id){
+  return product.find((p) =>p.id === Number(id));
+}
