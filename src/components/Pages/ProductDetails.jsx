@@ -4,16 +4,12 @@ import { getProductById, product } from "../../data/products";
 import { useCart } from "../../context/CartContext";
 
 export default function ProductDetails() {
-  
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
-  
+
   const { addToCart, cartItems } = useCart();
-  const productInCart = cartItems.find((item) => item.id === product.id);
-  const productQuantityLabel = productInCart
-    ? `(${productInCart.quantity})`
-    : "";
+  
   useEffect(() => {
     console.log("ID from URL:", id);
     const foundProduct = getProductById(id);
@@ -23,17 +19,17 @@ export default function ProductDetails() {
       return;
     }
 
-    
-
     setProduct(foundProduct);
     console.log("product found:", foundProduct);
   }, [id, navigate]);
   if (!product) {
     return <h1>Loading...</h1>;
   }
-  
 
-  
+  const productInCart = cartItems.find((item) => item.id === product.id);
+  const productQuantityLabel = productInCart
+    ? `(${productInCart.quantity})`
+    : "";
   return (
     <div className="page rounded-3">
       <div className="container-fluid">

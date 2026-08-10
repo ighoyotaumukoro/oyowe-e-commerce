@@ -13,15 +13,16 @@ export default function Checkout() {
               <h2 className="mb-4"> Order Summary</h2>
               {cartItems.map((item) => (
                 <div className="checkout-items d-flex">
-                  <img src={item.product.image} className="mb-4 cart-image img-fluid"/>
-                <div className="checkout-item-details ms-4">
-<h3 className="checkout-item-name">{item.product.name}</h3>
-<p className="checkout-item-price">
-  ₦{item.product.price} each
-</p>
-
-                </div>
-                
+                  <img
+                    src={item.product.image}
+                    className="mb-4 cart-image img-fluid"
+                  />
+                  <div className="checkout-item-details ms-4">
+                    <h3 className="checkout-item-name">{item.product.name}</h3>
+                    <p className="checkout-item-price">
+                      ₦{item.product.price} each
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
