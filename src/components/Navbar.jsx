@@ -3,6 +3,7 @@ import { Container, Nav, NavDropdown, Form, Button } from "react-bootstrap";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
+import { product } from "../data/products";
 
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
