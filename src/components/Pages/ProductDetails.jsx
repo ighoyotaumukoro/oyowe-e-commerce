@@ -9,7 +9,7 @@ export default function ProductDetails() {
   const navigate = useNavigate();
 
   const { addToCart, cartItems } = useCart();
-  
+
   useEffect(() => {
     console.log("ID from URL:", id);
     const foundProduct = getProductById(id);
@@ -27,14 +27,20 @@ export default function ProductDetails() {
   }
 
   const productInCart = cartItems.find((item) => item.id === product.id);
-  const productQuantityLabel = productInCart
-    ? `(${productInCart.quantity})`
-    : "";
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0,
+  );
   return (
     <div className="page rounded-3">
+      <p className="mt-5 mb-0 d-flex justify-content-center">
+          <i className="bi bi-cart"></i>
+          <span className="mx-2">Cart</span>
+          <label className="bg-danger text-white" style={{width:"20px", height:"20px", textAlign:"center", justifyItems:"center", borderRadius:"10px"}}>{totalItems}</label>
+        </p>
       <div className="container-fluid">
         <div
-          className="product-detail mt-5 bg-white py-3 ps-4 rounded-2"
+          className="product-detail mt-3 bg-white py-3 ps-4 rounded-2"
           style={{ display: "flex", gap: "30px" }}
         >
           <div className="product-detail-image">
@@ -55,7 +61,7 @@ export default function ProductDetails() {
               className="btn btn-sm btn-primary"
               onClick={() => addToCart(product.id)}
             >
-              Add to cart{productQuantityLabel}
+              Add to cart
             </button>
           </div>
         </div>

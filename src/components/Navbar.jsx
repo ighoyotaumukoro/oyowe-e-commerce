@@ -2,11 +2,15 @@ import { Link } from "react-router-dom";
 import { Container, Nav, NavDropdown, Form, Button } from "react-bootstrap";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
+  const { addToCart, cartItems } = useCart();
+    const productInCart = cartItems.find((item) => item.id === product.id);
+    const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0); 
   return (
-    <Nav className="container-fluid navbar bg-white">
+    <Nav className="container-fluid navbar bg-light shadow-sm py-2">
       <div className="navbar-container d-flex">
         <Link to="/" className="navbar-brand">
           <img
@@ -19,7 +23,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link to="/checkout" className="cart">
-            Cart
+            <i className="bi bi-cart"><span className="bg-danger text-white" style={{position:"absolute", width:"20px", height:"20px", textAlign:"center", justifyItems:"center", borderRadius:"10px"}}>{totalItems}</span></i>
           </Link>
         </div>
         {!user ? (

@@ -15,12 +15,14 @@ export default function Checkout() {
                 <div className="checkout-items d-flex">
                   <img
                     src={item.product.image}
-                    className="mb-4 cart-image img-fluid"
+                    className="rounded-3 mb-4 cart-image img-fluid"
                   />
                   <div className="checkout-item-details ms-4">
                     <h3 className="checkout-item-name">{item.product.name}</h3>
-                    <p className="checkout-item-price">
+
+                    <p className="checkout-item-price ">
                       ₦{item.product.price} each
+                      <span className="position-absolute end-0 me-4"></span>
                     </p>
                   </div>
                 </div>

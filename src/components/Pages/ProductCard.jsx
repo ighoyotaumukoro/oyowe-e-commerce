@@ -38,7 +38,7 @@ export default function ProductCard({ product }) {
             style={{}}
             onClick={() => addToCart(product.id)}
           >
-            Add to cart{productQuantityLabel}
+            Add to cart
           </button>
         </div>
       </div>
