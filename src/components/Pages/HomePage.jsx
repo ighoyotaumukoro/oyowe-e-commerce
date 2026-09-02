@@ -75,13 +75,13 @@ export default function HomePage() {
           >
             Laptops
           </div>
-          <div className="col-2 bg-white rounded-pill" style={{ width: "25%" }}>
+          <div className="col-2 bg-white rounded-pill text-muted" style={{ width: "25%" }}>
             Phones
           </div>
-          <div className="col-2 bg-white rounded-pill" style={{ width: "25%" }}>
+          <div className="col-2 bg-white rounded-pill text-muted" style={{ width: "25%" }}>
             Electronics
           </div>
-          <div className="col-2 bg-white rounded-pill" style={{ width: "25%" }}>
+          <div className="col-2 bg-white rounded-pill text-muted" style={{ width: "25%" }}>
             Gaming
           </div>
         </div>

@@ -49,13 +49,21 @@ export default function Navbar() {
               />
             </svg>
           </Link>
-          <p>Cart<span className="bg-danger text-white px-1 py-0" style={{borderRadius:"50%"}}>{totalItems}</span></p>
+          <p>
+            Cart
+            <span
+              className="bg-danger text-white px-1 py-0"
+              style={{ borderRadius: "50%" }}
+            >
+              {totalItems}
+            </span>
+          </p>
         </div>
 
         <div className="col-3">
           <Link to="/favorite" className="favorite">
             <svg
-            className="mb-0"
+              className="mb-0"
               width="27"
               height="27"
               viewBox="0 0 34 34"
