@@ -28,6 +28,10 @@
   
 }
 
+.favorite:active{
+color:red;
+}
+
 
 /* .login, .signup{
   padding: 5px;

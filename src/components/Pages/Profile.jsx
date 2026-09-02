@@ -87,8 +87,8 @@ export default function Profile() {
           </p>
         </div>
         <div className="row d-flex mx-auto mt-1">
-          <p className="text-dark">
-            <Link to="/checkout" className="cart">
+          <Link to="/checkout" className="cart">
+            <p className="text-dark">
               <svg
                 width="26"
                 height="26"
@@ -101,9 +101,10 @@ export default function Profile() {
                   fill="black"
                 />
               </svg>
-            </Link>
-            <span className="ms-2 fw-bold">Cart</span>
-          </p>
+
+              <span className="ms-2 fw-bold">Cart</span>
+            </p>
+          </Link>
         </div>
         <div className="row d-flex mx-auto mt-1">
           <p className="text-dark">
@@ -117,14 +118,20 @@ export default function Profile() {
               to="/auth"
               className="login text-decoration-none text-dark fw-bold"
             >
-             <span><i className="bi bi-box-arrow-in-right fs-3 ms-2 me-2"></i></span> Login
+              <span>
+                <i className="bi bi-box-arrow-in-right fs-3 ms-2 me-2"></i>
+              </span>{" "}
+              Login
             </Link>
             <p>
               <Link
                 to="/auth"
                 className="signup text-decoration-none text-dark fw-bold"
               >
-               <span><i className="bi bi-person-add fs-3 ms-2 me-2"></i></span> Sign up
+                <span>
+                  <i className="bi bi-person-add fs-3 ms-2 me-2"></i>
+                </span>{" "}
+                Sign up
               </Link>
             </p>
           </div>
@@ -135,7 +142,10 @@ export default function Profile() {
                 onClick={logout}
                 className="fw-bold text-danger rounded-1 btn btn-sm border-0"
               >
-               <span><i className="ms-2 bi bi-box-arrow-right fs-3 me-2"></i></span> Logout
+                <span>
+                  <i className="ms-2 bi bi-box-arrow-right fs-3 me-2"></i>
+                </span>{" "}
+                Logout
               </p>
             </Link>
           </div>

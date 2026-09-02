@@ -7,7 +7,7 @@ export default function Auth() {
   const [mode, setMode] = useState("signup");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const { signUp, user,  login } = useContext(AuthContext);
+  const { signUp, user, login } = useContext(AuthContext);
 
   const {
     register,
@@ -23,15 +23,15 @@ export default function Auth() {
     } else {
       result = login(data.name, data.email, data.password);
     }
-   if (result.success === false){
-    setError(result.error);
-   }
-  };
+    if (result.success === false) {
+      setError(result.error);
+    }
+  }
 
   useEffect(() => {
     if (user) {
       navigate("/");
-    } 
+    }
   }, [user, navigate]);
   return (
     <div className="pt-5 page">

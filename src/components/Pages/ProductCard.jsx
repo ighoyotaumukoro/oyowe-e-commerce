@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { product } from "../../data/products";
 import { useCart } from "../../context/CartContext";
+import { useWishlist } from "../../context/WishlistContext";
 export default function ProductCard({ product }) {
   const { addToCart, cartItems } = useCart();
   const productInCart = cartItems.find((item) => item.id === product.id);
@@ -8,29 +9,45 @@ export default function ProductCard({ product }) {
     ? `(${productInCart.quantity})`
     : "";
 
+    const { addToWishlist, wishlistItems } = useWishlist();
+  const productInWishlist = wishlistItems.find((item) => item.id === product.id);
+  const productLabel = productInWishlist
+    ? `(${productInWishlist.quantity})`
+    : "";
+
   return (
-    <Link to={`/products/${product.id}`}>
-      <div className="card border-0 shadow mx-3" style={{width:"20vh", height:"20vh"}}>
-        
-          <img
-            src={product.image}
-            className="img-fluid mx-auto pt-3"
-            style={{
-              objectFit: "",
-              width: "80px",
-              height: "80px",
-            }}
-          />
-          <div className="product-details">
-            <p className="product-name fw-bolder mt-2 mb-1 text-center">{product.name}</p>
-            <div className="justify-content-evenly position-absolute end-0 start-0 d-flex">
-              <h5
-                className="product-price fw-bold"
-                style={{ color: "rgb(7, 83, 247)" }}
-              >
-                ₦{product.price}
-              </h5>
-              <svg
+    
+      <div
+        className="card border-0 shadow mx-3"
+        style={{ width: "20vh", height: "20vh" }}
+      >
+        <div className="justify-content-end">
+          <span></span>
+        </div>
+        <Link to={`/products/${product.id}`}>
+        <img
+          src={product.image}
+          className="img-fluid ms-4 pt-3"
+          style={{
+            objectFit: "",
+            width: "80px",
+            height: "80px",
+          }}
+        />
+        </Link>
+        <div className="product-details">
+          <p className="product-name fw-bolder mt-2 mb-1 text-center">
+            {product.name}
+          </p>
+          <div className="justify-content-evenly position-absolute end-0 start-0 d-flex">
+            <h5
+              className="product-price fw-bold"
+              style={{ color: "rgb(7, 83, 247)" }}
+            >
+              ₦{product.price}
+            </h5>
+            <svg
+              onClick={() => {addToCart(product.id); alert("Added to cart")}}
               width="20"
               height="20"
               viewBox="0 0 32 26"
@@ -42,10 +59,33 @@ export default function ProductCard({ product }) {
                 fill="black"
               />
             </svg>
-            </div>
+            
+            <svg
+            onClick={() => {addToWishlist(product.id); alert("Added to wishlist")}}
+              className="favorite mb-3"
+              width="22"
+              height="22"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_216)">
+                <path
+                  d="M23.375 4.25C20.91 4.25 18.5442 5.3975 17 7.21083C15.4559 5.3975 13.09 4.25 10.625 4.25C6.26171 4.25 2.83337 7.67833 2.83337 12.0417C2.83337 17.3967 7.65004 21.76 14.9459 28.39L17 30.2458L19.0542 28.3758C26.35 21.76 31.1667 17.3967 31.1667 12.0417C31.1667 7.67833 27.7384 4.25 23.375 4.25ZM17.1417 26.2792L17 26.4208L16.8584 26.2792C10.115 20.1733 5.66671 16.1358 5.66671 12.0417C5.66671 9.20833 7.79171 7.08333 10.625 7.08333C12.8067 7.08333 14.9317 8.48583 15.6825 10.4267H18.3317C19.0684 8.48583 21.1934 7.08333 23.375 7.08333C26.2084 7.08333 28.3334 9.20833 28.3334 12.0417C28.3334 16.1358 23.885 20.1733 17.1417 26.2792Z"
+                  fill="black"
+                  fill-opacity="0.8"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_216">
+                  <rect width="34" height="34" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            
           </div>
         </div>
-      
-    </Link>
+      </div>
+  
   );
 }
