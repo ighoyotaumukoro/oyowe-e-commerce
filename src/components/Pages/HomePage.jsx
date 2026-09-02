@@ -14,7 +14,7 @@ export default function HomePage() {
       <Link to="/" className="navbar-brand">
         <img
           src="/HJYG4683.PNG"
-          className="nav-logo img-fluid position-absolute top-0 "
+          className="m-2 nav-logo img-fluid position-absolute top-0 "
         />
       </Link>
 
@@ -143,7 +143,7 @@ export default function HomePage() {
 
         <div
           className="h3 py-5 mx-3 rounded-3 text-white mb-4"
-          style={{ backgroundColor: "#020227" }}
+          style={{ backgroundColor: "#07059e" }}
         >
           <p className="mb-0 ms-2">Big Sales this weekend</p>
           <p className="ms-2">up to 20% off</p>

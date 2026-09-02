@@ -9,31 +9,31 @@ export default function AuthProvider({ children }) {
       : null,
   );
 
-  function signUp(name, password) {
+  function signUp(name, email, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    if (users.find((u) => u.name === name)) {
+    if (users.find((u) => u.name === name && u.email === email)) {
       return { success: false, error: "User already exists" };
     }
-    const newUser = { name, password };
+    const newUser = { name, email, password };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("currentUserName", name);
-    setUser({ name });
+    localStorage.setItem("currentUserName", name, email);
+    setUser({ name, email });
     return { succcess: true };
   }
 
-  function login(name, password) {
+  function login(name, email, password) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
     const user = users.find(
-      (u) => u.name === name && u.password === password,
+      (u) => u.name === name && u.email === email && u.password === password,
     );
     
     if (!user) {
-      return { success: false, error: "Invalid name or password" };
+      return { success: false, error: "Invalid email or password" };
     }
-    localStorage.setItem("currentUserName", name);
-    setUser({ name });
-    return { succes: true };
+    localStorage.setItem("currentUserName", name, email);
+    setUser({ name, email });
+    return { success: true };
   }
 
   function logout() {

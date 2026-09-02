@@ -7,7 +7,7 @@ export default function Auth() {
   const [mode, setMode] = useState("signup");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const { signUp, user, login } = useContext(AuthContext);
+  const { signUp, user,  login } = useContext(AuthContext);
 
   const {
     register,
@@ -19,9 +19,9 @@ export default function Auth() {
     setError(null);
     let result;
     if (mode === "signup") {
-      result = signUp(data.name, data.password);
+      result = signUp(data.name, data.email, data.password);
     } else {
-      result = login(data.name, data.password);
+      result = login(data.name, data.email, data.password);
     }
    if (result.success === false){
     setError(result.error);
@@ -59,6 +59,21 @@ export default function Auth() {
                 />
                 {errors.name && (
                   <span className="text-danger">{errors.name.message}</span>
+                )}
+              </div>
+
+              <div className="form-group">
+                <label className="form-label" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  {...register("email", { required: "Email is required" })}
+                  className="form-input"
+                />
+                {errors.email && (
+                  <span className="text-danger">{errors.email.message}</span>
                 )}
               </div>
               <div className="form-group">

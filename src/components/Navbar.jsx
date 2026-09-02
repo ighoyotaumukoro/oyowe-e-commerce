@@ -104,29 +104,6 @@ export default function Navbar() {
           </Link>
           <p>Profile</p>
         </div>
-
-        {/* {!user ? ( 
-          <div className="col-6 navbar-auth align-content-center position-absolute end-0 me-4">
-            <Link to="/auth" className="login btn btn-secondary btn-sm me-2">
-              Login
-            </Link>
-            <Link to="/auth" className="signup btn btn-primary btn-sm">
-              Sign up
-            </Link>
-          </div>
-        ) : (
-          <div className="navbar-user align-content-center position-absolute end-0 me-4">
-            <span className="me-2">{user.name}</span>
-            <Link to="/auth" className="text-dark">
-              <button
-                onClick={logout}
-                className="bg-danger text-white rounded-1 btn btn-sm border-0"
-              >
-                Logout
-              </button>
-            </Link>
-          </div>
-        )} */}
       </div>
     </Nav>
   );
