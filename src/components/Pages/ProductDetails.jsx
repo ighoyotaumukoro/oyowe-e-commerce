@@ -55,7 +55,7 @@ export default function ProductDetails() {
             <p className="product-des mt-0">{product.description}</p>
             <button
               className="btn btn-sm btn-primary"
-              onClick={() => addToCart(product.id)}
+              onClick={() => {addToCart(product.id); alert("Added to cart")}}
             >
               Add to cart
             </button>

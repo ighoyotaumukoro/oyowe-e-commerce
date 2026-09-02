@@ -148,8 +148,8 @@ export default function HomePage() {
           <p className="mb-0 ms-2">Big Sales this weekend</p>
           <p className="ms-2">up to 20% off</p>
         </div>
-        <div className="home-hero">
-          <div className="row product-list g-3 mx-3">
+        <div className="home-hero mb-5">
+          <div className="row product-list g-3 mx-3 ">
             {product.map((product) => (
               <div key={product.id} className="col-6 col-md-6 col-lg-4 d-flex ">
                 <ProductCard product={product} />

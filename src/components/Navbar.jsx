@@ -49,7 +49,7 @@ export default function Navbar() {
               />
             </svg>
           </Link>
-          <p>Cart</p>
+          <p>Cart<span className="bg-danger text-white px-1 py-0" style={{borderRadius:"50%"}}>{totalItems}</span></p>
         </div>
 
         <div className="col-3">

@@ -32,7 +32,8 @@ export default function ProductCard({ product }) {
               </h5>
               <svg
               className=""
-                onClick={() => addToCart(product.id)}
+                onClick={() =>{ addToCart(product.id); alert("added to cart")}}
+              
                 width="20"
                 height="20"
                 viewBox="0 0 26 26"
