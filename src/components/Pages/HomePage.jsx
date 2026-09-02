@@ -86,11 +86,12 @@ export default function HomePage() {
           </div>
         </div>
         <div className="row my-2">
-          <div className="col-7">
+          <div className="">
             <input
               type="text"
               className="bg-white text-muted border-0 py-2 ps-2 rounded-3 ms-3"
               placeholder="Search"
+              style={{ width: "80%" }}
             />
           </div>
           <svg

@@ -4,6 +4,23 @@ import { Link } from "react-router-dom";
 export default function Checkout() {
   const { getCartItemsWithProducts } = useCart();
   const cartItems = getCartItemsWithProducts();
+
+  if (cartItems.length === 0) {
+    return (
+      <>
+      <Link to="/" className="navbar-brand">
+        <img
+          src="/HJYG4683.PNG"
+          className="m-2 nav-logo img-fluid position-absolute top-0 "
+        />
+      </Link>
+      <div className="container text-center mt-5">
+        <h1 className="mt-4 text-dark">Checkout</h1>
+        <p className="card card-body border-0 shadow-sm p-5 mt-5 fw-bold  text-dark">Your Cart is empty☹</p>
+      </div>
+      </>
+    );
+  }
   return (
     <>
       <Link to="/" className="navbar-brand">

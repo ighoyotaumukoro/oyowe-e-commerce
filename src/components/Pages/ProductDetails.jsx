@@ -32,34 +32,32 @@ export default function ProductDetails() {
     0,
   );
   return (
-    <div className="page rounded-3">
-      
-      <div className="container-fluid">
-        <div
-          className="product-detail mt-3 bg-white py-3 ps-4 rounded-2"
-          style={{ display: "flex", gap: "30px" }}
-        >
-          <div className="product-detail-image">
-            <img
-              src={product.image}
-              className="product-image rounded-2"
-              alt="product-name"
-              style={{ width: "200px", height: "210px", objectFit: "cover" }}
-            />
-          </div>
-          <div className="product-detail-content" style={{}}>
-            <h3 className="product-name fw-bolder">{product.name}</h3>
-            <p className="product-price mb-0 text-primary fw-bold mb-2">
-              ₦{product.price}
-            </p>
-            <p className="product-des mt-0">{product.description}</p>
-            <button
-              className="btn btn-sm btn-primary"
-              onClick={() => {addToCart(product.id); alert("Added to cart")}}
-            >
-              Add to cart
-            </button>
-          </div>
+    <div className="page">
+      <div className="container-fluid p-0">
+  
+          <img
+            src={product.image}
+            className="img-fluid product-image w-100 d-block"
+            alt="product-name"
+            style={{height:"50vh"}}
+          />
+        
+        <div className="card card-body pb-5 product-detail-content mx-1" style={{marginTop:"-5vh", borderRadius:"20px 20px 0px 0px"}}>
+          <h3 className="h3 product-name fw-bolder">{product.name}</h3>
+          <p className="product-price mb-0 text-primary fw-bold mb-2 h4">
+          <span className="fw-semibold text-dark"> Price: </span>₦{product.price}
+          </p>
+          <p className="mb-1 fw-semibold">Description</p>
+          <p className="product-des mt-0">{product.description}</p>
+          <button
+            className="mt-5 btn btn-sm btn-primary"
+            onClick={() => {
+              addToCart(product.id);
+              alert("Added to cart");
+            }}
+          >
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

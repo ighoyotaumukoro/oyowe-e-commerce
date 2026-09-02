@@ -3,18 +3,28 @@ import { Container, Nav, NavDropdown, Form, Button } from "react-bootstrap";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
 import { product } from "../data/products";
 
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
   const { addToCart, cartItems } = useCart();
+  const { addToWishlist, wishlistItems } = useWishlist();
   const productInCart = cartItems.find((item) => item.id === product.id);
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
     0,
   );
+
+  const productInWishlist = wishlistItems.find(
+    (item) => item.id === product.id,
+  );
+  const totalWishlist = wishlistItems.reduce(
+    (total, item) => total + item.quantity,
+    0,
+  );
   return (
-    <Nav className=" container-fluid fixed-bottom navbar border-none bg-white mx-auto  shadow py-2">
+    <Nav className="container-fluid fixed-bottom navbar border-none bg-white shadow py-2">
       <div className="navbar-container row d-flex g-5 mx-auto align-content-around">
         <div className="col-3">
           <Link to="/" className="home ">
@@ -52,7 +62,7 @@ export default function Navbar() {
           <p>
             Cart
             <span
-              className="bg-danger text-white px-1 py-0"
+              className=" position-absolute top-0 bg-danger text-white px-1 py-0"
               style={{ borderRadius: "50%" }}
             >
               {totalItems}
@@ -84,7 +94,15 @@ export default function Navbar() {
               </defs>
             </svg>
           </Link>
-          <p className="">Favorite</p>
+          <p className="">
+            Favorite
+            <span
+              className="position-absolute top-0 ms-4 bg-danger text-white px-1 py-0"
+              style={{ borderRadius: "50%" }}
+            >
+              {totalWishlist}
+            </span>
+          </p>
         </div>
 
         <div className="col-3">

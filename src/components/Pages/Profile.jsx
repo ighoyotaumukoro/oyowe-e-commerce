@@ -59,8 +59,9 @@ export default function Profile() {
           </p>
         </div>
         <div className="row d-flex mx-auto mt-1">
+          <Link to="/favorite" className="favorite text-decoration-none">
           <p className="text-dark">
-            <Link to="/favorite" className="favorite">
+            
               <svg
                 className="mb-0"
                 width="27"
@@ -82,9 +83,10 @@ export default function Profile() {
                   </clipPath>
                 </defs>
               </svg>
-            </Link>
+            
             <span className="ms-2 fw-bold">Wishlist</span>
           </p>
+          </Link>
         </div>
         <div className="row d-flex mx-auto mt-1">
           <Link to="/checkout" className="cart">

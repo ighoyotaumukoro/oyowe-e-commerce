@@ -5,6 +5,7 @@ export const product=[
     price: "15,000",
     image:"/IMG_E6516.JPG",
     description:"Premium wireless headphone with noise cancellation",
+    category:"Gaming"
   },
 
    {
@@ -13,6 +14,7 @@ export const product=[
     price: "2,500,000",
     image:"/IMG_6512.JPG",
     description:"RAM 8GB, storage 256GB, iOS 26 wit Apple intelligence built-in",
+    catergory: "Phones"
   },
 
    {
@@ -21,6 +23,7 @@ export const product=[
     price: "20,500",
     image:"/IMG_E6514.JPG",
     description:"Apple airpods with USB-C charging case. Seamless pairing with iphone/ipad/Mac",
+     category:"Gaming"
   },
 
    {
@@ -29,6 +32,7 @@ export const product=[
     price: "150,000",
     image:"/IMG_6517.PNG",
     description:"Dimensity 8200 ultra, 12GB RAM, 512GB storage. Techno current camera king and best seller in Nigeria",
+    catergory: "Phones"
   },
 
    {
@@ -37,6 +41,7 @@ export const product=[
     price: "900,800",
     image:"/IMG_E6518.JPG",
     description:"10.9 inch Liquid Retina display, A14 Bionic chip, USB-C, 56GB storage",
+    catergory: "Phones"
   },
 
    {
@@ -45,6 +50,7 @@ export const product=[
     price: "234,000",
     image:"/IMG_6513.PNG",
     description:"RAM 4GB, storage 128GB , Glass back.",
+    catergory: "Phones"
   },
 ]
 
