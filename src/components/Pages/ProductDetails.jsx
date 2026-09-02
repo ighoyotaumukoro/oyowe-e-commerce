@@ -33,11 +33,7 @@ export default function ProductDetails() {
   );
   return (
     <div className="page rounded-3">
-      <p className="mt-5 mb-0 d-flex justify-content-center">
-          <i className="bi bi-cart"></i>
-          <span className="mx-2">Cart</span>
-          <label className="bg-danger text-white" style={{width:"20px", height:"20px", textAlign:"center", justifyItems:"center", borderRadius:"10px"}}>{totalItems}</label>
-        </p>
+      
       <div className="container-fluid">
         <div
           className="product-detail mt-3 bg-white py-3 ps-4 rounded-2"

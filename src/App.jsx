@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import AuthProvider from "./context/AuthContext";
 import CartProvider from "./context/CartContext";
 import ProductDetails from "./components/Pages/ProductDetails";
+import Profile from "./components/Pages/Profile";
 
 function App() {
   return (
@@ -14,14 +15,16 @@ function App() {
     <AuthProvider>
       <CartProvider>
     <div>
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
     </div>
+    <Navbar />
     </CartProvider>
     </AuthProvider>
 

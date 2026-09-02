@@ -21,7 +21,6 @@
 }
 
 .home, .cart{
-  margin-right: 10px;
   text-decoration: none;
   color: black;
   font-family: Arial;
@@ -30,7 +29,7 @@
 }
 
 
-.login, .signup{
+/* .login, .signup{
   padding: 5px;
   text-decoration: none;
   color: rgb(12, 12, 12);
@@ -38,7 +37,7 @@
   color: #fff;
   border-radius: 3px;
   font-size: 12px;
-}
+} */
 
 
 .welcome, .sub{
@@ -53,9 +52,9 @@
 }
 
 
-.welcome{
+/* .welcome{
   font-size: 22px;
-}
+} */
 
 .sub{
   font-size: 12px;
@@ -86,16 +85,18 @@
   border-radius: 5px ;
   
 }
+.product-list{
+flex-wrap: wrap;
+
+}
 
 @media (max-width:768px){
- .product-list{
-flex-wrap: nowrap;
-overflow: auto;
-} 
-
 .product-name{
-  font-size: 16px;
+  font-size: 12px;
+  text-wrap: wrap !important;
 }
+
+
 
 .product-des{
   font-size: 12px;
@@ -104,7 +105,9 @@ overflow: auto;
   font-size: 14px;
   font-weight: 700;
 }
-
+.product-price{
+  font-size: 12px;
+}
 .checkout-item-price{
   font-size: 14px;
 }
@@ -129,9 +132,7 @@ overflow: auto;
   width: 40px ;
   
 }
-.navbar-links{
-  margin-left: 20px !important;
-}
+
 }
 @media (min-width: 768px){
 
@@ -139,11 +140,7 @@ overflow: auto;
   width: 40px ;
   
 }
-.product-list{
-flex-wrap: wrap ;
-overflow: visible;
 
-}
 
 .auth-card{
   width: 30% !important;
@@ -153,8 +150,8 @@ overflow: visible;
 .navbar-links{
   margin-left: 500px !important;
 }
-
-.product-list .card{
-  flex:0 0 calc(33.333% - 1rem) !important;
+.product-price{
+  font-size: 14px;
 }
+
 }
