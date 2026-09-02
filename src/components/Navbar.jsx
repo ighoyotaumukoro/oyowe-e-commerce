@@ -14,7 +14,7 @@ export default function Navbar() {
     0,
   );
   return (
-    <Nav className=" container-fluid navbar border-none bg-white mx-auto  shadow py-2">
+    <Nav className=" container-fluid fixed-bottom navbar border-none bg-white mx-auto  shadow py-2">
       <div className="navbar-container row d-flex g-5 mx-auto align-content-around">
         <div className="col-3">
           <Link to="/" className="home ">
